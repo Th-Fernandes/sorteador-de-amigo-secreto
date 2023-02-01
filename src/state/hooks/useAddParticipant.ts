@@ -7,7 +7,8 @@ export function useAddParticipant() {
 
   function addParticipantOnParticipantsState(newParticipantName: string) {
     if(list.includes(newParticipantName)) {
-      setError('Nomes duplicados não são permitidos!');
+      const setErrorMessage = setError('Nomes duplicados não são permitidos!');
+      const cleanErrorMessageTimer = setTimeout(() => setError(""), 5000);
       return;
     }
 
