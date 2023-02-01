@@ -44,3 +44,19 @@ test('it should add a participant if it has a filled name on input', () => {
   expect(input).toHaveFocus();
   expect(input).toHaveValue("");
 })
+
+test('it should throw an error if participant is duplicated', () => {
+  render(<AddParticipantsForm/>);
+  const { input, button } = getHTMLElementsFromFormComponent();
+  
+  function submitSameParticipantTwice() {
+    for( let i = 0; i <= 2; i++ ) {
+      fireEvent.change(input, { target: { value: 'Thiago' } });
+      fireEvent.click(button);
+    }
+  }
+  const duplicatedParticipantErrorMessage = screen.getByRole('alert');
+  
+  submitSameParticipantTwice();
+  expect(duplicatedParticipantErrorMessage).toBe('Nomes duplicados não são permitidos!');
+})
