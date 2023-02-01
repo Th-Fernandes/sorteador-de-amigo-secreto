@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import { RecoilRoot } from "recoil";
 import { AddParticipantsForm } from ".";
 
 function getHTMLElementsFromFormComponent() {
@@ -21,7 +22,11 @@ test('should not be able to add participants when input is empty', () => {
 })
 
 test('it should add a participant if it has a filled name on input', () => {
-  render(<AddParticipantsForm />)
+  render(
+    <RecoilRoot>
+      <AddParticipantsForm />
+    </RecoilRoot>
+  )
 
   const { input, button } = getHTMLElementsFromFormComponent();
 
@@ -38,9 +43,4 @@ test('it should add a participant if it has a filled name on input', () => {
 
   expect(input).toHaveFocus();
   expect(input).toHaveValue("");
-  /*
-    1. pegar o input e o button na DOM [x]
-    2. preencher o input com algum nome [x]
-    3. utilizar o hook de adicionar participante ao clicar no button
-  */
 })
