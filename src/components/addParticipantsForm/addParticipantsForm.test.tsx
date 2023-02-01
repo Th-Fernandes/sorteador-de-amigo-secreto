@@ -15,88 +15,100 @@ function getHTMLElementsFromFormComponent() {
   };
 }
 
-test("it should not be able to add participants when input is empty", () => {
-  render(
-    <RecoilRoot>
-      <AddParticipantsForm />
-    </RecoilRoot>
-  );
+describe("addParticipantsForm.tsx behavior", () => {
+  test("it should not be able to add participants when input is empty", () => {
+    render(
+      <RecoilRoot>
+        <AddParticipantsForm />
+      </RecoilRoot>
+    );
 
-  const { input, button } = getHTMLElementsFromFormComponent();
+    const { input, button } = getHTMLElementsFromFormComponent();
 
-  expect(input).toBeInTheDocument();
-  expect(button).toBeDisabled();
-});
+    expect(input).toBeInTheDocument();
+    expect(button).toBeDisabled();
+  });
 
-test("it should add a participant if it has a filled name on input", () => {
-  render(
-    <RecoilRoot>
-      <AddParticipantsForm />
-    </RecoilRoot>
-  );
+  test("it should add a participant if it has a filled name on input", () => {
+    render(
+      <RecoilRoot>
+        <AddParticipantsForm />
+      </RecoilRoot>
+    );
 
-  const { input, button } = getHTMLElementsFromFormComponent();
+    const { input, button } = getHTMLElementsFromFormComponent();
 
-  function setParticipantNameOnInput() {
-    fireEvent.change(input, { target: { value: "Thiago" } });
-  }
-
-  function submitParticipantName() {
-    fireEvent.click(button);
-  }
-
-  setParticipantNameOnInput();
-  submitParticipantName();
-
-  expect(input).toHaveFocus();
-  expect(input).toHaveValue("");
-});
-
-test("it should throw an error if participant is duplicated", () => {
-  render(
-    <RecoilRoot>
-      <AddParticipantsForm />
-    </RecoilRoot>
-  );
-  const { input, button } = getHTMLElementsFromFormComponent();
-
-  function submitSameParticipantTwice() {
-    for (let i = 0; i <= 2; i++) {
+    function setParticipantNameOnInput() {
       fireEvent.change(input, { target: { value: "Thiago" } });
+    }
+
+    function submitParticipantName() {
       fireEvent.click(button);
     }
-  }
-  
-  submitSameParticipantTwice();
-  const duplicatedParticipantAlert = screen.getByRole("alert");
 
-  expect(duplicatedParticipantAlert.textContent).toBe(
-    "Nomes duplicados não são permitidos!"
-  );
-});
+    setParticipantNameOnInput();
+    submitParticipantName();
 
-test("it should verify if error message disappears after timer", () => {
-  jest.useFakeTimers();
-  render(
-    <RecoilRoot>
-      <AddParticipantsForm />
-    </RecoilRoot>
-  );
-  const { input, button } = getHTMLElementsFromFormComponent();
+    expect(input).toHaveFocus();
+    expect(input).toHaveValue("");
+  });
 
-  function submitSameParticipantTwice() {
-    for (let i = 0; i <= 2; i++) {
-      fireEvent.change(input, { target: { value: "Thiago" } });
-      fireEvent.click(button);
+  test("it should throw an error if participant is duplicated", () => {
+    render(
+      <RecoilRoot>
+        <AddParticipantsForm />
+      </RecoilRoot>
+    );
+    const { input, button } = getHTMLElementsFromFormComponent();
+
+    function submitSameParticipantTwice() {
+      for (let i = 0; i <= 2; i++) {
+        fireEvent.change(input, { target: { value: "Thiago" } });
+        fireEvent.click(button);
+      }
     }
-  }
-  
-  submitSameParticipantTwice();
-  let duplicatedParticipantAlert = screen.queryByRole("alert");
 
-  expect(duplicatedParticipantAlert).toBeInTheDocument();
+    submitSameParticipantTwice();
+    const duplicatedParticipantAlert = screen.getByRole("alert");
 
-  act(() => { jest.runAllTimers() });
-  duplicatedParticipantAlert = screen.queryByRole("alert");
-  expect(duplicatedParticipantAlert).toBeNull();
+    expect(duplicatedParticipantAlert.textContent).toBe(
+      "Nomes duplicados não são permitidos!"
+    );
+  });
+
+  test("it should verify if error message disappears after timer", () => {
+    jest.useFakeTimers();
+    render(
+      <RecoilRoot>
+        <AddParticipantsForm />
+      </RecoilRoot>
+    );
+    const { input, button } = getHTMLElementsFromFormComponent();
+
+    function submitSameParticipantTwice() {
+      for (let i = 0; i <= 2; i++) {
+        fireEvent.change(input, { target: { value: "Thiago" } });
+        fireEvent.click(button);
+      }
+    }
+
+    let duplicatedParticipantAlert: HTMLElement | null;
+
+    function verifyIfErrorRendered() {
+      submitSameParticipantTwice();
+      duplicatedParticipantAlert = screen.queryByRole("alert");
+      expect(duplicatedParticipantAlert).toBeInTheDocument();
+    }
+
+    function verifyIfErrorDesappierAfterTimer() {
+      act(() => {
+        jest.runAllTimers();
+      });
+      duplicatedParticipantAlert = screen.queryByRole("alert");
+      expect(duplicatedParticipantAlert).toBeNull();
+    }
+
+    verifyIfErrorRendered();
+    verifyIfErrorDesappierAfterTimer();
+  });
 });
