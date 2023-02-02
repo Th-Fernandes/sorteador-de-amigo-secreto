@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -11,6 +12,11 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
+  body {
+    background-color: ${theme.colors.main};
+    min-height: 100vh;
+  }
+  
   body, input  {
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
