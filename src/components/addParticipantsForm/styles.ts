@@ -11,6 +11,7 @@ export const StyledAddParticipantsForm = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  background-color: #fff;
 
   @media(min-width: 768px) {
     max-width: 72.6rem;

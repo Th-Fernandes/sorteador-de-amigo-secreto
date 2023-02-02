@@ -23,5 +23,7 @@ export const StyledHeader = styled.header`
 
   img {
     max-width: 100%;
+    position: relative;
+    z-index: 999;
   }
 `;
