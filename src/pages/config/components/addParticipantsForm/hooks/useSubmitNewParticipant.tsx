@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { useAddParticipant } from "../../../state/hooks/useAddParticipant";
+import { useAddParticipant } from "../../../../../state/hooks/useAddParticipant";
 
 export function useSubmitNewParticipant() {
   const [participantName, setParticipantName] = useState<string>("");

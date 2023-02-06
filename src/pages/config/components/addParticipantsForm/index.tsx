@@ -1,4 +1,4 @@
-import { useErrorMessage } from "../../state/hooks/useErrorMessage";
+import { useErrorMessage } from "../../../../state/hooks/useErrorMessage";
 import { useSubmitNewParticipant } from "./hooks/useSubmitNewParticipant";
 import { StyledAddParticipantsForm } from "./styles";
 
