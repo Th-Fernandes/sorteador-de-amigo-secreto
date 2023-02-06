@@ -28,7 +28,6 @@ describe('ParticipantsList.tsx empty list', () => {
         <ParticipantsList />
       </RecoilRoot>
     );
-
     const { participantListItems } = getHTMLElementsFromParticipantsList();
 
     expect(participantListItems).toHaveLength(0);

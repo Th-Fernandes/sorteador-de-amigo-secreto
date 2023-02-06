@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`root page behaviors it should render root page 1`] = `
+<div>
+  <header
+    class="sc-dkrFOg kEqgLL"
+  >
+    <div
+      class="header-content"
+    >
+      <h1>
+        <img
+          alt="sorteador de amigo secreto logo"
+          src="/img/logo.png"
+        />
+      </h1>
+      <img
+        alt=""
+        src="/img/participante.png"
+      />
+    </div>
+  </header>
+  <section
+    class="sc-gswNZR gWlwQb"
+  >
+    <form
+      class="sc-bcXHqe iHWvvt"
+    >
+      <div
+        class="add_participants_input_container"
+      >
+        <label
+          class="add_participant_icon"
+          for="addParticipantsInput"
+        >
+          <span
+            class="material-icons "
+          >
+            person_add
+          </span>
+        </label>
+        <input
+          id="addParticipantsInput"
+          placeholder="Insira o nome dos participantes"
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        class="submit_participant_button"
+        disabled=""
+      >
+        Adicionar
+      </button>
+      
+    </form>
+    <ul />
+    <footer>
+      <button
+        disabled=""
+      >
+        Iniciar brincadeira!
+      </button>
+    </footer>
+  </section>
+</div>
+`;

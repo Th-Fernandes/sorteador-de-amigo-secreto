@@ -48,6 +48,7 @@ describe('when it has enough participants', () => {
     expect(getButtonByRole).toBeEnabled();
 
     const submitParticipants = fireEvent.click(getButtonByRole);
+
     expect(mockNavigation).toHaveBeenCalledTimes(1);
     expect(mockNavigation).toHaveBeenCalledWith('/raffle');
   })
