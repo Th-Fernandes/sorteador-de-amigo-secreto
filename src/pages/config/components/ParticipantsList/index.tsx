@@ -1,4 +1,4 @@
-import { useParticipantsList } from "../../state/hooks/useParticipantsList"
+import { useParticipantsList } from "../../../../state/hooks/useParticipantsList"
 
 export function ParticipantsList() {
   const participants = useParticipantsList();
