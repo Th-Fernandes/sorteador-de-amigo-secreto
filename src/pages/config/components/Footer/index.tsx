@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { useParticipantsList } from "../../../../state/hooks/useParticipantsList"
+import { useParticipantsList } from "state/hooks/useParticipantsList"
+import { StyledFooter } from "./styles";
 
 export function Footer() {
   const navigateTo = useNavigate();
@@ -14,13 +15,17 @@ export function Footer() {
   }
 
  return (
-  <footer>
+  <StyledFooter>
     <button 
       onClick={handleNavigateToRaffleRoute}
       disabled={hasEnoughParticipants()}
+      className="submit-participants-btn"
     >
+      <img src="/img/play-logo.png" alt="" />
       Iniciar brincadeira!
     </button>
-  </footer>
+
+    <img src="/img/sacolas.png" alt="" />
+  </StyledFooter>
  )
 }
