@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useParticipantsList } from "../../state/hooks/useParticipantsList"
+import { useParticipantsList } from "../../../../state/hooks/useParticipantsList"
 
 export function Footer() {
   const navigateTo = useNavigate();
