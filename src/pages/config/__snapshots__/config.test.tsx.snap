@@ -55,12 +55,23 @@ exports[`root page behaviors it should render root page 1`] = `
       
     </form>
     <ul />
-    <footer>
+    <footer
+      class="sc-hLBbgP hvaZoj"
+    >
       <button
+        class="submit-participants-btn"
         disabled=""
       >
+        <img
+          alt=""
+          src="/img/play-logo.png"
+        />
         Iniciar brincadeira!
       </button>
+      <img
+        alt=""
+        src="/img/sacolas.png"
+      />
     </footer>
   </section>
 </div>
