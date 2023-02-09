@@ -1,0 +1,1 @@
+export type shuffleResult = Map<string, string>;
