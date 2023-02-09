@@ -14,7 +14,7 @@ export function setShuffle(participantsList: ParticipantsList) {
       shuffledParticipantsList[index],
       shuffledParticipantsList[shuffleIndex]
     );
-  }
+  } 
 
-  return shuffleResult
+  return shuffleResult;
 }

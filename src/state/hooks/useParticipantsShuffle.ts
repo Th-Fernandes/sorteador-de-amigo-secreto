@@ -1,6 +1,6 @@
-import shuffle from "just-shuffle";
 import { useRecoilState } from "recoil";
 import { shuffleResultState } from "state/atom";
+import { setShuffle } from "state/helpers/setShuffle";
 import { useParticipantsList } from "./useParticipantsList";
 
 export function useParticipantsShuffle() {
@@ -8,18 +8,7 @@ export function useParticipantsShuffle() {
   const [shuffleResult, setShuffleResult ] = useRecoilState(shuffleResultState)
 
   return function () {
-    const participantsQuantity = participantsList.length;
-    const shuffledParticipantsList = shuffle(participantsList);
-
-    for (let index = 0; index < participantsQuantity; index++) {
-      const lastParticipantIndex = participantsQuantity - 1;
-      const shuffleIndex = index === lastParticipantIndex ? 0 : index + 1;
-
-      shuffleResult.set(
-        shuffledParticipantsList[index],
-        shuffledParticipantsList[shuffleIndex]
-      );
-    }
-    setShuffleResult(shuffleResult);
-  };
+    const result = setShuffle(participantsList);
+    setShuffleResult(result);
+  }
 }
