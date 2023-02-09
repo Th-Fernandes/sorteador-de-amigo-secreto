@@ -1,16 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import { useParticipantsList } from "state/hooks/useParticipantsList"
+import { useParticipantsShuffle } from "state/hooks/useParticipantsShuffle";
 import { StyledFooter } from "./styles";
 
 export function Footer() {
   const navigateTo = useNavigate();
   const participantsList = useParticipantsList();
-  
+  const shuffleParticipants = useParticipantsShuffle();
+
   function hasEnoughParticipants() {
     return participantsList.length < 3
   }
 
   function handleNavigateToRaffleRoute() {
+    shuffleParticipants()
     navigateTo('/raffle')
   }
 
