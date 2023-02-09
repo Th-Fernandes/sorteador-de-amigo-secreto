@@ -17,7 +17,7 @@ describe('results page', () => {
   test('should allow all participants to show your secret friend', () => {
     render(<ResultsPage/>);  
 
-    const getOptionsByRole = screen.queryAllByRole('option');
-    expect(getOptionsByRole).toHaveLength(participants.length);
+    const optionsByRole = screen.queryAllByRole('option');
+    expect(optionsByRole).toHaveLength(participants.length);
   })
 })
