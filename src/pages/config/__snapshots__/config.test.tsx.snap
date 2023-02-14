@@ -3,7 +3,7 @@
 exports[`root page behaviors it should render root page 1`] = `
 <div>
   <header
-    class="sc-dkrFOg kEqgLL"
+    class="sc-hLBbgP kuWMaj"
   >
     <div
       class="header-content"
@@ -21,42 +21,44 @@ exports[`root page behaviors it should render root page 1`] = `
     </div>
   </header>
   <section
-    class="sc-gswNZR gWlwQb"
+    class="sc-dkrFOg gaBrUx"
   >
-    <form
-      class="sc-bcXHqe iHWvvt"
-    >
-      <div
-        class="add_participants_input_container"
+    <main>
+      <form
+        class="sc-bcXHqe iHWvvt"
       >
-        <label
-          class="add_participant_icon"
-          for="addParticipantsInput"
+        <div
+          class="add_participants_input_container"
         >
-          <span
-            class="material-icons "
+          <label
+            class="add_participant_icon"
+            for="addParticipantsInput"
           >
-            person_add
-          </span>
-        </label>
-        <input
-          id="addParticipantsInput"
-          placeholder="Insira o nome dos participantes"
-          type="text"
-          value=""
-        />
-      </div>
-      <button
-        class="submit_participant_button"
-        disabled=""
-      >
-        Adicionar
-      </button>
-      
-    </form>
-    <ul />
+            <span
+              class="material-icons "
+            >
+              person_add
+            </span>
+          </label>
+          <input
+            id="addParticipantsInput"
+            placeholder="Insira o nome dos participantes"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="submit_participant_button"
+          disabled=""
+        >
+          Adicionar
+        </button>
+        
+      </form>
+      <ul />
+    </main>
     <footer
-      class="sc-hLBbgP hvaZoj"
+      class="sc-gswNZR iRsXGx"
     >
       <button
         class="submit-participants-btn"
