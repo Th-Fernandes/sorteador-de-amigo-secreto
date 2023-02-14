@@ -3,6 +3,7 @@ import { Heading } from "components/Heading";
 import { FormEvent, useState } from "react";
 import { useParticipantsList } from "state/hooks/useParticipantsList";
 import { useShuffleResult } from "state/hooks/useShuffleResult";
+import { Footer } from "./components/footer";
 
 export function ResultsPage() {
   const participantsList = useParticipantsList();
@@ -48,9 +49,7 @@ export function ResultsPage() {
           </div>
         </form>
       </main>
-      <footer>
-        <img src="/img/aviao.png"  alt="" />
-      </footer>
+      <Footer />
     </App>
   );
 }

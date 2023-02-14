@@ -24,6 +24,11 @@ exports[`root page behaviors it should render root page 1`] = `
     class="sc-dkrFOg gaBrUx"
   >
     <main>
+      <h2
+        class="sc-eDvSVe eneSpm"
+      >
+        Vamos começar!
+      </h2>
       <form
         class="sc-bcXHqe iHWvvt"
       >
