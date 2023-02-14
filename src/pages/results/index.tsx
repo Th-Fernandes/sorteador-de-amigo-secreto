@@ -1,4 +1,5 @@
 import App from "App";
+import { Heading } from "components/Heading";
 import { FormEvent, useState } from "react";
 import { useParticipantsList } from "state/hooks/useParticipantsList";
 import { useShuffleResult } from "state/hooks/useShuffleResult";
@@ -20,7 +21,7 @@ export function ResultsPage() {
   return (
     <App>
       <main>
-        <h2>Quem vai tirar o papelzinho?</h2>
+        <Heading>Quem vai tirar o papelzinho?</Heading>
 
         <form onSubmit={handleSubmit}>
           <select
