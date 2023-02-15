@@ -1,6 +1,6 @@
 import { useErrorMessage } from "../../../../state/hooks/useErrorMessage";
 import { useSubmitNewParticipant } from "./hooks/useSubmitNewParticipant";
-import { StyledAddParticipantsForm } from "./styles";
+import { StyledAddParticipantsForm, StyledAddParticipantsInput, StyledSubmitParticipantBtn } from "./styles";
 
 export function AddParticipantsForm() {
   const { participantName, setParticipantName, inputRef, submitParticipant } =
@@ -9,7 +9,7 @@ export function AddParticipantsForm() {
 
   return (
     <StyledAddParticipantsForm onSubmit={(event) => submitParticipant(event)}>
-      <div className="add_participants_input_container">
+      <StyledAddParticipantsInput>
         <label className="add_participant_icon" htmlFor="addParticipantsInput">
           <span className="material-icons ">person_add</span>
         </label>
@@ -21,10 +21,10 @@ export function AddParticipantsForm() {
           type="text"
           placeholder="Insira o nome dos participantes"
         />
-      </div>
-      <button className="submit_participant_button" disabled={!participantName}>
+      </StyledAddParticipantsInput>
+      <StyledSubmitParticipantBtn disabled={!participantName}>
         Adicionar
-      </button>
+      </StyledSubmitParticipantBtn>
       {
         errorMessage &&
         <p role="alert">{errorMessage}</p>
