@@ -59,7 +59,7 @@ describe("when it has enough participants", () => {
     const submitParticipants = fireEvent.click(getButtonByRole);
 
     expect(mockNavigation).toHaveBeenCalledTimes(1);
-    expect(mockNavigation).toHaveBeenCalledWith("/raffle");
+    expect(mockNavigation).toHaveBeenCalledWith("/results");
     expect(mockShuffle).toHaveBeenCalledTimes(1);
   });
 });

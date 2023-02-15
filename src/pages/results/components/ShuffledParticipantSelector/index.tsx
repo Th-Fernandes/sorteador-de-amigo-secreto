@@ -27,6 +27,7 @@ export function ShuffledParticipantSelector() {
             value={selectedParticipant}
             onChange={(event) => setSelectedParticipant(event.target.value)}
           >
+            <option>Selecione seu nome</option>
             {participantsList.map((participant) => (
               <option key={participant}>{participant}</option>
             ))}

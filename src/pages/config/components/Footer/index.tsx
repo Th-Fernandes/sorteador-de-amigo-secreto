@@ -12,15 +12,15 @@ export function Footer() {
     return participantsList.length < 3
   }
 
-  function handleNavigateToRaffleRoute() {
+  function handleNavigateToResultsRoute() {
     shuffleParticipants()
-    navigateTo('/raffle')
+    navigateTo('/results')
   }
 
  return (
   <StyledFooter>
     <button 
-      onClick={handleNavigateToRaffleRoute}
+      onClick={handleNavigateToResultsRoute}
       disabled={hasEnoughParticipants()}
       className="submit-participants-btn"
     >

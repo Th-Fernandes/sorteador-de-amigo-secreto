@@ -24,6 +24,6 @@ describe('results page', () => {
     );  
 
     const optionsByRole = screen.queryAllByRole('option');
-    expect(optionsByRole).toHaveLength(participants.length);
+    expect(optionsByRole).toHaveLength(participants.length + 1);
   })
 })
