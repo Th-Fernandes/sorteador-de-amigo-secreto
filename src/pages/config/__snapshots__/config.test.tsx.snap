@@ -3,7 +3,7 @@
 exports[`root page behaviors it should render root page 1`] = `
 <div>
   <header
-    class="sc-jSUZER jDXyYZ"
+    class="sc-jSUZER iWjRSV"
   >
     <div
       class="header-content"
@@ -21,65 +21,69 @@ exports[`root page behaviors it should render root page 1`] = `
     </div>
   </header>
   <section
-    class="sc-eDvSVe kuiOsZ"
+    class="sc-eDvSVe dzXGBD"
   >
-    <main>
-      <h2
-        class="sc-gKPRtg sc-iBYQkv gRNJMQ hyiNAi"
-      >
-        Vamos começar!
-      </h2>
-      <form
-        class="sc-bcXHqe dyyNau"
-      >
-        <div
-          class="sc-gswNZR hQZgTC"
+    <div
+      class="sc-ftTHYK efVGuN"
+    >
+      <main>
+        <h2
+          class="sc-gKPRtg sc-iBYQkv gRNJMQ hyiNAi"
         >
-          <label
-            class="add_participant_icon"
-            for="addParticipantsInput"
+          Vamos começar!
+        </h2>
+        <form
+          class="sc-bcXHqe dyyNau"
+        >
+          <div
+            class="sc-gswNZR hQZgTC"
           >
-            <span
-              class="material-icons "
+            <label
+              class="add_participant_icon"
+              for="addParticipantsInput"
             >
-              person_add
-            </span>
-          </label>
-          <input
-            id="addParticipantsInput"
-            placeholder="Insira o nome dos participantes"
-            type="text"
-            value=""
-          />
-        </div>
+              <span
+                class="material-icons "
+              >
+                person_add
+              </span>
+            </label>
+            <input
+              id="addParticipantsInput"
+              placeholder="Insira o nome dos participantes"
+              type="text"
+              value=""
+            />
+          </div>
+          <button
+            class="sc-dkrFOg ljbKhK"
+            disabled=""
+          >
+            Adicionar
+          </button>
+          
+        </form>
+        <ul />
+      </main>
+      <footer
+        class="sc-hLBbgP hvaZoj"
+      >
         <button
-          class="sc-dkrFOg ljbKhK"
+          class="submit-participants-btn"
           disabled=""
         >
-          Adicionar
+          <img
+            alt=""
+            src="/img/play-logo.png"
+          />
+          Iniciar brincadeira!
         </button>
-        
-      </form>
-      <ul />
-    </main>
-    <footer
-      class="sc-hLBbgP hvaZoj"
-    >
-      <button
-        class="submit-participants-btn"
-        disabled=""
-      >
         <img
           alt=""
-          src="/img/play-logo.png"
+          src="/img/sacolas.png"
         />
-        Iniciar brincadeira!
-      </button>
-      <img
-        alt=""
-        src="/img/sacolas.png"
-      />
-    </footer>
+      </footer>
+    </div>
   </section>
 </div>
 `;
