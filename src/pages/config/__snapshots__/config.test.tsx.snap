@@ -3,7 +3,7 @@
 exports[`root page behaviors it should render root page 1`] = `
 <div>
   <header
-    class="sc-hLBbgP kuWMaj"
+    class="sc-jSUZER jDXyYZ"
   >
     <div
       class="header-content"
@@ -21,19 +21,19 @@ exports[`root page behaviors it should render root page 1`] = `
     </div>
   </header>
   <section
-    class="sc-dkrFOg gaBrUx"
+    class="sc-eDvSVe kuiOsZ"
   >
     <main>
       <h2
-        class="sc-eDvSVe eneSpm"
+        class="sc-gKPRtg sc-iBYQkv gRNJMQ hyiNAi"
       >
         Vamos começar!
       </h2>
       <form
-        class="sc-bcXHqe iHWvvt"
+        class="sc-bcXHqe dyyNau"
       >
         <div
-          class="add_participants_input_container"
+          class="sc-gswNZR hQZgTC"
         >
           <label
             class="add_participant_icon"
@@ -53,7 +53,7 @@ exports[`root page behaviors it should render root page 1`] = `
           />
         </div>
         <button
-          class="submit_participant_button"
+          class="sc-dkrFOg ljbKhK"
           disabled=""
         >
           Adicionar
@@ -63,7 +63,7 @@ exports[`root page behaviors it should render root page 1`] = `
       <ul />
     </main>
     <footer
-      class="sc-gswNZR iRsXGx"
+      class="sc-hLBbgP hvaZoj"
     >
       <button
         class="submit-participants-btn"

@@ -8,7 +8,7 @@ export const StyledFooter = styled.footer`
   gap: 2.4rem;
   margin-top: 1.8rem;
 
-  @media (min-width: ${theme.sizes.md}px) {
+  @media (min-width: ${theme.sizes.lg}px) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -27,7 +27,7 @@ export const StyledFooter = styled.footer`
       cursor: pointer;
     }
 
-    @media (min-width: ${theme.sizes.md}px) {
+    @media (min-width: ${theme.sizes.lg}px) {
       display: flex;
       align-items: center;
       gap: 2.6rem;
@@ -37,7 +37,7 @@ export const StyledFooter = styled.footer`
     > img {
       display: none;
 
-      @media (min-width: ${theme.sizes.md}px) {
+      @media (min-width: ${theme.sizes.lg}px) {
         display: block;
       }
     }

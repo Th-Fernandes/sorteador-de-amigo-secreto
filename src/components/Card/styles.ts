@@ -3,7 +3,7 @@ import { theme } from "../../theme/theme";
 
 export const StyledCard = styled.section`
   background-color: ${theme.colors.light[400]};
-  max-width: ${theme.sizes.md}px;
+  max-width: ${theme.sizes.lg}px;
   margin-inline: auto;
   position: relative;
   bottom: 3.1rem;

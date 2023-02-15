@@ -14,7 +14,8 @@ export const theme = {
   },
   sizes: {
     sm: 360,
-    md: 1024
+    md: 768,
+    lg: 1024
   }
 }
 

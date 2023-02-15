@@ -8,11 +8,11 @@ export const StyledHeader = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: ${theme.sizes.md}px;
+    max-width: ${theme.sizes.lg}px;
     padding-top: 3.1rem;
     
 
-    @media (min-width: ${theme.sizes.md + 'px'}) {
+    @media (min-width: ${theme.sizes.lg}px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
