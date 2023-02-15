@@ -2,7 +2,9 @@ import styled from "styled-components";
 import { theme } from "../../theme/theme";
 
 export const StyledHeader = styled.header`
-  background-color: ${theme.colors.main};
+  position: relative;
+  top: 3.1rem;
+
 
   .header-content {
     display: flex;
