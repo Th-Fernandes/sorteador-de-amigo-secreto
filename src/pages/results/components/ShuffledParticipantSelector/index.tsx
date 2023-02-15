@@ -1,6 +1,7 @@
 import { useState, FormEvent } from "react";
 import { useParticipantsList } from "state/hooks/useParticipantsList";
 import { useShuffleResult } from "state/hooks/useShuffleResult";
+import { StyledForm, StyledSelect, StyledSubmitButton } from "./styles";
 
 export function ShuffledParticipantSelector() {
   const participantsList = useParticipantsList();
@@ -17,8 +18,8 @@ export function ShuffledParticipantSelector() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-          <select
+    <StyledForm onSubmit={handleSubmit}>
+          <StyledSelect
             required
             name="selectedParticipant"
             id="selectedParticipant"
@@ -29,17 +30,17 @@ export function ShuffledParticipantSelector() {
             {participantsList.map((participant) => (
               <option key={participant}>{participant}</option>
             ))}
-          </select>
+          </StyledSelect>
 
           <span>Clique em em sortear para ver quem é seu amigo secreto!</span>
           
           <div>
-            <button>
+            <StyledSubmitButton>
               <img src="/img/casino.png" alt="" />
               Sortear!
-            </button>
+            </StyledSubmitButton>
             {secretFriend && <p role="alert">{secretFriend}</p>}
           </div>
-        </form>
+        </StyledForm>
   )
 }

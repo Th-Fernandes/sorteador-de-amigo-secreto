@@ -1,5 +1,4 @@
 import { fireEvent, render, screen } from "@testing-library/react"
-import { RecoilRoot } from "recoil";
 import { useParticipantsList } from "state/hooks/useParticipantsList";
 import { useShuffleResult } from "state/hooks/useShuffleResult";
 import { ShuffledParticipantSelector } from ".";
