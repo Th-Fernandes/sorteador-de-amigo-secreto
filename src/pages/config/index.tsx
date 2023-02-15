@@ -2,13 +2,13 @@ import { AddParticipantsForm } from "./components/addParticipantsForm";
 import { ParticipantsList } from "./components/ParticipantsList";
 import { Footer } from "./components/Footer";
 import App from "App";
-import { Heading } from "components/Heading";
+import { CustomHeading } from "./components/CustomHeading";
 
 export function ConfigPage() {
   return (
     <App>
       <main>
-        <Heading>Vamos começar!</Heading>
+        <CustomHeading>Vamos começar!</CustomHeading>
         <AddParticipantsForm />
         <ParticipantsList />
       </main>
@@ -16,3 +16,5 @@ export function ConfigPage() {
     </App>
   );
 }
+
+
