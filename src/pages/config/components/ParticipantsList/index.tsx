@@ -1,15 +1,16 @@
-import { useParticipantsList } from "../../../../state/hooks/useParticipantsList"
+import { useParticipantsList } from "state/hooks/useParticipantsList"
+import { StyledParticipantsList } from "./styles";
 
 export function ParticipantsList() {
   const participants = useParticipantsList();
 
   return (
-    <ul>
+    <StyledParticipantsList>
       {
         participants.map(participant => (
           <li key={participant}>{participant}</li>
         ))
       }
-    </ul>
+    </StyledParticipantsList>
   )
 }
