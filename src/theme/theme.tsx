@@ -16,7 +16,12 @@ export const theme = {
     sm: 360,
     md: 768,
     lg: 1024
-  }
+  },
+  shadowBorder: `
+    border: 1px solid #000;
+    border-radius: 3.75rem;
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+  `
 }
 
 export function ThemeComponent ({children}:any) {
