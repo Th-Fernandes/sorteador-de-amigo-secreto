@@ -9,6 +9,6 @@ export const StyledCard = styled.section`
   
 
   @media(min-width: ${theme.sizes.md}px) {
-    height: calc(100vh - 40rem);
+    min-height: calc(100vh - 40rem);
   }
 `

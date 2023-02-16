@@ -39,3 +39,11 @@ export const StyledSubmitButton = styled.button`
   cursor: pointer;
   ${theme.shadowBorder};
 `
+
+export const StyledAlertMessage = styled.span`
+  display: block;
+  text-align: center; 
+  margin-top: 1.6rem;
+  font-size: 2.5rem;
+  color: ${theme.colors.orange}
+`
