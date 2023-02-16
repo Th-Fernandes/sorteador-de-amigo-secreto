@@ -3,7 +3,7 @@
 exports[`root page behaviors it should render root page 1`] = `
 <div>
   <header
-    class="sc-jSUZER iWjRSV"
+    class="sc-gKPRtg hdwHpx"
   >
     <div
       class="header-content"
@@ -21,14 +21,14 @@ exports[`root page behaviors it should render root page 1`] = `
     </div>
   </header>
   <section
-    class="sc-eDvSVe dzXGBD"
+    class="sc-jSUZER dKFrUh"
   >
     <div
-      class="sc-ftTHYK efVGuN"
+      class="sc-pyfCe bXkFhM"
     >
       <main>
         <h2
-          class="sc-gKPRtg sc-iBYQkv gRNJMQ hyiNAi"
+          class="sc-iBYQkv sc-ftTHYK dSWAHD iyjARg"
         >
           Vamos começar!
         </h2>
@@ -61,12 +61,14 @@ exports[`root page behaviors it should render root page 1`] = `
           >
             Adicionar
           </button>
-          
         </form>
-        <ul />
+        
+        <ul
+          class="sc-hLBbgP iHIhdg"
+        />
       </main>
       <footer
-        class="sc-hLBbgP hvaZoj"
+        class="sc-eDvSVe gJZlTb"
       >
         <button
           class="submit-participants-btn"

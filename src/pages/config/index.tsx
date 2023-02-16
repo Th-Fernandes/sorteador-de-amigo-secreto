@@ -4,6 +4,7 @@ import { Footer } from "./components/Footer";
 import App from "App";
 import { CustomHeading } from "./components/CustomHeading";
 import { PageContainer } from "./styles";
+import { ErrorMessage } from "./components/ErrorMessage";
 
 export function ConfigPage() {
   return (
@@ -12,6 +13,7 @@ export function ConfigPage() {
         <main>
           <CustomHeading>Vamos começar!</CustomHeading>
           <AddParticipantsForm />
+          <ErrorMessage />
           <ParticipantsList />
         </main>
         <Footer />

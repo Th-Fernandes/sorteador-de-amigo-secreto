@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import { RecoilRoot } from "recoil";
 import { AddParticipantsForm } from ".";
+import { ErrorMessage } from "../ErrorMessage";
 
 function getHTMLElementsFromFormComponent() {
   const getInputByPlaceholder = screen.getByPlaceholderText(
@@ -56,7 +57,8 @@ describe("addParticipantsForm.tsx behavior", () => {
   test("it should throw an error if participant is duplicated", () => {
     render(
       <RecoilRoot>
-        <AddParticipantsForm />
+        <AddParticipantsForm/>
+        <ErrorMessage/>
       </RecoilRoot>
     );
     const { input, button } = getHTMLElementsFromFormComponent();
@@ -81,6 +83,7 @@ describe("addParticipantsForm.tsx behavior", () => {
     render(
       <RecoilRoot>
         <AddParticipantsForm />
+        <ErrorMessage/>  
       </RecoilRoot>
     );
     const { input, button } = getHTMLElementsFromFormComponent();
