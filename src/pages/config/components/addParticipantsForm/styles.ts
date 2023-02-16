@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { theme } from "theme/theme";
 
-const styledBorder = `
-  border: 1px solid #000;
-  border-radius: 3.75rem;
-  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
-`;
 
 export const StyledAddParticipantsForm = styled.form`
   display: flex;
@@ -19,7 +14,7 @@ export const StyledAddParticipantsForm = styled.form`
     height: 8rem;
     flex-direction: row;
     gap: 0;
-    ${styledBorder};
+    ${theme.shadowBorder};;
   }
 `;
 
@@ -32,7 +27,7 @@ export const StyledAddParticipantsInput = styled.div`
   height: 100%;
   padding: 1.4rem 2.6rem;
   background-color: #fff;
-  ${styledBorder};
+  ${theme.shadowBorder};;
 
   @media (min-width: 768px) {
     border-radius: 3.75rem 0 0 3.75rem;
@@ -63,7 +58,7 @@ export const StyledAddParticipantsInput = styled.div`
 export const StyledSubmitParticipantBtn = styled.button`
   min-width: 15.5rem;
   padding-block: 1.1rem;
-  ${styledBorder};
+  ${theme.shadowBorder};;
    
   @media (min-width: 768px) {
     border-left: 2px solid #000000;

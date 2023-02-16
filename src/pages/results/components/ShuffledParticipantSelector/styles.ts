@@ -21,7 +21,9 @@ export const StyledSelect = styled.select`
   width: min(100%, 47.6rem);
   margin-top: 3.4rem;
   border-radius: 3.2rem;
-  padding-block: 2.5rem;
+  padding: 2.5rem 1.4rem;
+  cursor: pointer;
+  ${theme.shadowBorder};
 `
 export const StyledSubmitButton = styled.button`
   display: flex;
@@ -35,4 +37,5 @@ export const StyledSubmitButton = styled.button`
   background-color: ${theme.colors.orange};
   color: ${theme.colors.light[400]};
   cursor: pointer;
+  ${theme.shadowBorder};
 `
